@@ -23,7 +23,7 @@ namespace APPRH.Controllers
             return View();
         }
 
-         public IActionResult Funcionarios()
+        public IActionResult Funcionarios()
         {
             return View();
         }
