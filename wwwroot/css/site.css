@@ -2,6 +2,7 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
+  color: rgb(253, 133, 133);
   white-space: normal;
   text-align: center;
   word-break: break-all;
@@ -19,7 +20,7 @@ a {
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
+  color: rgb(238, 61, 61);
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
@@ -62,6 +63,7 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
 .footer {
   position: absolute;
   bottom: 0;
