@@ -65,47 +65,6 @@ body {
   background-color: rgba(184, 247, 232, 0.5);
 }
 
-#container-index
-{
-
-border-style: solid;
-
-border-width:thin;
-
-border-color: Black;
-
-background-color: rgb(255, 255, 255);
-
-float: center;
-
-width: 800px;
-
-height: 260px;
-
-margin-top: 2px;
-
-}
-
-#container-index-lat
-{
-
-border-style: solid;
-
-border-width:thin;
-
-border-color: Black;
-
-background-color: rgb(255, 255, 255);
-
-float: right;
-
-width: 305px;
-
-height: 515px;
-
-margin-top: 2px;
-
-}
 
 
 .footer {
@@ -116,3 +75,29 @@ margin-top: 2px;
   line-height: 60px; /* Vertically center the text there */
   background-color: rgb(255, 255, 255);
 }
+
+#container-index
+{
+border-style: solid;
+border-width:thin;
+border-color: Black;
+background-color: rgb(255, 255, 255);
+float: center;
+width: 800px;
+height: 260px;
+margin-top: 2px;
+}
+
+#container-index-lat
+{
+border-style: solid;
+border-width:thin;
+border-color: Black;
+background-color: rgb(255, 255, 255);
+float: right;
+width: 305px;
+height: 515px;
+margin-top: 2px;
+
+}
+
