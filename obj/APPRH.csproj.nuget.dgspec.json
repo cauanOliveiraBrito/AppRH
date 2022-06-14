@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cauan\\Desktop\\APPRH\\APPRH.csproj": {}
+    "C:\\Users\\cauan\\Documents\\programas\\AppRH\\APPRH.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cauan\\Desktop\\APPRH\\APPRH.csproj": {
+    "C:\\Users\\cauan\\Documents\\programas\\AppRH\\APPRH.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cauan\\Desktop\\APPRH\\APPRH.csproj",
+        "projectUniqueName": "C:\\Users\\cauan\\Documents\\programas\\AppRH\\APPRH.csproj",
         "projectName": "APPRH",
-        "projectPath": "C:\\Users\\cauan\\Desktop\\APPRH\\APPRH.csproj",
+        "projectPath": "C:\\Users\\cauan\\Documents\\programas\\AppRH\\APPRH.csproj",
         "packagesPath": "C:\\Users\\cauan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cauan\\Desktop\\APPRH\\obj\\",
+        "outputPath": "C:\\Users\\cauan\\Documents\\programas\\AppRH\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cauan\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -81,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.411\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\3.1.419\\RuntimeIdentifierGraph.json"
         }
       }
     }
