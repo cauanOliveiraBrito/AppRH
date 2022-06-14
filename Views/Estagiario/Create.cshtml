@@ -1,0 +1,50 @@
+@model APPRH.Models.Estagiario
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Estagiario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4" id="create">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nome" class="control-label"></label>
+                <input asp-for="nome" class="form-control" />
+                <span asp-validation-for="nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="idade" class="control-label"></label>
+                <input asp-for="idade" class="form-control" />
+                <span asp-validation-for="idade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cpf" class="control-label"></label>
+                <input asp-for="cpf" class="form-control" />
+                <span asp-validation-for="cpf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cargo" class="control-label"></label>
+                <input asp-for="cargo" class="form-control" />
+                <span asp-validation-for="cargo" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="matricula" class="control-label"></label>
+                <input asp-for="matricula" class="form-control" />
+                <span asp-validation-for="matricula " class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+

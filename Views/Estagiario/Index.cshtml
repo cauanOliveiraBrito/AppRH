@@ -1,0 +1,58 @@
+@model IEnumerable<MoveisPlane APPRHjados.Models.Estagiario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista estagiario</h1>
+
+    <a asp-action="Create" id="btnCreate" class="btn btn-primary" role="button">Criar estagiario</a>
+<br>
+<table class="table table-success table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cpf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cargo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.matricula)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idade)
+            </td>
+           <td>
+                @Html.DisplayFor(modelItem => item.cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cargo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.matricula)
+            </td>
+
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.estagiarioid">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.estagiarioid">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.estagiarioid">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

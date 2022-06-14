@@ -11,4 +11,6 @@ using APPRH.Models;
         public AplicationDBContext(DbContextOptions<AplicationDBContext> options) : base(options){}
 
         public DbSet<APPRH.Models.Funcionario> Funcionario { get; set; }
+        
+        public DbSet<APPRH.Models.Estagiario> Estagiario { get; set;}
     }

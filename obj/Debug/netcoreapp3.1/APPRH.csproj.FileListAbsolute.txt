@@ -300,3 +300,8 @@ C:\Users\cauan\Documents\programas\AppRH\obj\Debug\netcoreapp3.1\Razor\Views\Fun
 C:\Users\cauan\Documents\programas\AppRH\obj\Debug\netcoreapp3.1\Razor\Views\Funcionarios\Details.cshtml.g.cs
 C:\Users\cauan\Documents\programas\AppRH\obj\Debug\netcoreapp3.1\Razor\Views\Funcionarios\Edit.cshtml.g.cs
 C:\Users\cauan\Documents\programas\AppRH\obj\Debug\netcoreapp3.1\Razor\Views\Funcionarios\Index.cshtml.g.cs
+C:\Users\cauan\Documents\programas\AppRH\obj\Debug\netcoreapp3.1\Razor\Views\Estagiario\Create.cshtml.g.cs
+C:\Users\cauan\Documents\programas\AppRH\obj\Debug\netcoreapp3.1\Razor\Views\Estagiario\Delete.cshtml.g.cs
+C:\Users\cauan\Documents\programas\AppRH\obj\Debug\netcoreapp3.1\Razor\Views\Estagiario\Details.cshtml.g.cs
+C:\Users\cauan\Documents\programas\AppRH\obj\Debug\netcoreapp3.1\Razor\Views\Estagiario\Edit.cshtml.g.cs
+C:\Users\cauan\Documents\programas\AppRH\obj\Debug\netcoreapp3.1\Razor\Views\Estagiario\Index.cshtml.g.cs

@@ -1,0 +1,46 @@
+@model  APPRH.Models.Estagiario
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <h4>Funcionario</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.idade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.idade)
+        </dd>
+          <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cpf)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cpf)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cargo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cargo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.matricula)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.matricula)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.estagiarioid">Editar</a> |
+    <a asp-action="Index">Voltar</a>
+</div>

@@ -4,12 +4,11 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Lista funcionarios</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+    <a asp-action="Create" id="btnCreate" class="btn btn-primary" role="button">Criar funcionario</a>
+<br>
+<table class="table table-success table-striped">
     <thead>
         <tr>
             <th>
@@ -17,6 +16,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Matricula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cpf)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Setor)
@@ -38,6 +40,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Matricula)
+            </td>
+           <td>
+                @Html.DisplayFor(modelItem => item.cpf)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Setor)

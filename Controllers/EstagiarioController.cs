@@ -10,22 +10,22 @@ using APPRH.Models;
 
 namespace APPRH.Controllers
 {
-    public class FuncionariosController : Controller
+    public class EstagiarioController : Controller
     {
-        private readonly AplicationDBContext _context;
+         private readonly AplicationDBContext _context;
 
-        public FuncionariosController(AplicationDBContext context)
+        public EstagiarioController(AplicationDBContext context)
         {
             _context = context;
         }
 
-        // GET: Funcionarios
+        // GET: Estagiario
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Funcionario.ToListAsync());
+            return View(await _context.Estagiario.ToListAsync());
         }
 
-        // GET: Funcionarios/Details/5
+        // GET: Estagiario/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,40 +33,39 @@ namespace APPRH.Controllers
                 return NotFound();
             }
 
-            var funcionario = await _context.Funcionario
-                .FirstOrDefaultAsync(m => m.FuncionarioId == id);
-            if (funcionario == null)
+            var Estagiario = await _context.Estagiario
+                .FirstOrDefaultAsync(m => m.estagiarioid == id);
+            if (Estagiario == null)
             {
                 return NotFound();
             }
 
-            return View(funcionario);
+            return View(Estagiario);
         }
 
-        // GET: Funcionarios/Create
+        // GET: Estagiario/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Funcionarios/Create
+        // POST: Estagiario/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("FuncionarioId,Nome,Matricula,cpf,Setor,Vencimento")] Funcionario funcionario)
+        public async Task<IActionResult> Create([Bind("estagiarioid,nome,idade,cpf,cargo,matricula")] Estagiario estagiario)
         {
             if (ModelState.IsValid)
             {
-                funcionario.Disponivel = true;
-                _context.Add(funcionario);
+                _context.Add(estagiario);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(funcionario);
+            return View(estagiario);
         }
 
-        // GET: Funcionarios/Edit/5
+        // GET: Estagiario/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -74,22 +73,22 @@ namespace APPRH.Controllers
                 return NotFound();
             }
 
-            var funcionario = await _context.Funcionario.FindAsync(id);
-            if (funcionario == null)
+            var estagiario = await _context.Estagiario.FindAsync(id);
+            if (estagiario == null)
             {
                 return NotFound();
             }
-            return View(funcionario);
+            return View(estagiario);
         }
 
-        // POST: Funcionarios/Edit/5
+        // POST: Estagiario/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("FuncionarioId,Nome,Matricula,cpf,Setor,Vencimento")] Funcionario funcionario)
+        public async Task<IActionResult> Edit(int id, [Bind("estagiarioid,nome,idade,cpf,cargo,matricula")] Estagiario estagiario)
         {
-            if (id != funcionario.FuncionarioId)
+            if (id != estagiario.estagiarioid)
             {
                 return NotFound();
             }
@@ -98,12 +97,12 @@ namespace APPRH.Controllers
             {
                 try
                 {
-                    _context.Update(funcionario);
+                    _context.Update(estagiario);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!FuncionarioExists(funcionario.FuncionarioId))
+                    if (!EstagiarioExists(estagiario.estagiarioid))
                     {
                         return NotFound();
                     }
@@ -114,10 +113,10 @@ namespace APPRH.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(funcionario);
+            return View(estagiario);
         }
 
-        // GET: Funcionarios/Delete/5
+        // GET: Estagiario/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -125,30 +124,30 @@ namespace APPRH.Controllers
                 return NotFound();
             }
 
-            var funcionario = await _context.Funcionario
-                .FirstOrDefaultAsync(m => m.FuncionarioId == id);
-            if (funcionario == null)
+            var estagiario = await _context.Estagiario
+                .FirstOrDefaultAsync(m => m.estagiarioid == id);
+            if (estagiario == null)
             {
                 return NotFound();
             }
 
-            return View(funcionario);
+            return View(estagiario);
         }
 
-        // POST: Funcionarios/Delete/5
+        // POST: Estagiario/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var funcionario = await _context.Funcionario.FindAsync(id);
-            _context.Funcionario.Remove(funcionario);
+            var estagiario = await _context.Estagiario.FindAsync(id);
+            _context.Estagiario.Remove(estagiario);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool FuncionarioExists(int id)
+        private bool EstagiarioExists(int id)
         {
-            return _context.Funcionario.Any(e => e.FuncionarioId == id);
+            return _context.Estagiario.Any(e => e.estagiarioid == id);
         }
     }
 }

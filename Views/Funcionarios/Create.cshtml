@@ -9,7 +9,7 @@
 <h4>Funcionario</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4" id="create">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -31,6 +31,11 @@
                 <label asp-for="Vencimento" class="control-label"></label>
                 <input asp-for="Vencimento" class="form-control" />
                 <span asp-validation-for="Vencimento" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="cpf" class="control-label"></label>
+                <input asp-for="cpf" class="form-control" />
+                <span asp-validation-for="cpf " class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
